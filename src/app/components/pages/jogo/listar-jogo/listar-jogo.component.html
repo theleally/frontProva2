@@ -2,37 +2,29 @@
   <mat-card-header>
     <mat-card-title> Listar Jogos </mat-card-title>
   </mat-card-header>
-  <mat-card-content> 
+  <mat-card-content>
     <table>
       <tr>
-        <th>
-          #
-        </th>
-        <th>
-          Seleção A
-        </th>
-        <th>
-
-        </th>
-        <th>
-          Seleção B
-        </th>
+        <th>#</th>
+        <th>Seleção A</th>
+        <th></th>
+        <th>Seleção B</th>
       </tr>
       <tr *ngFor="let jogo of jogos">
         <td>
           {{ jogo.id }}
         </td>
         <td>
-          {{ jogo.selecaoA }}
+          {{ jogo.selecaoA?.nome }}
+        </td>
+        <td>Palpite</td>
+        <td>
+          {{ jogo.selecaoB?.nome }}
         </td>
         <td>
-          Palpite
-        </td>
-        <td>
-          {{ jogo.selecaoB }}
-        </td>
-        <td>
-          <button><a routerLink="/pages/jogo/palpitar/{{ jogo.id }}"> Palpitar </a></button>
+          <button>
+            <a routerLink="/pages/jogo/palpitar/{{ jogo.id }}"> Palpitar </a>
+          </button>
         </td>
       </tr>
     </table>

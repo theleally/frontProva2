@@ -4,20 +4,27 @@
   </mat-card-header>
   <mat-card-content>
     <h3>Seleção A</h3>
-    <select name="" id="">
+    <select name="selecaoA" id="selecaoA" [(ngModel)]="selecaoA">
       <option *ngFor="let selecao of selecoes" value="{{ selecao.id }}">
         {{ selecao.id }} - {{ selecao.nome }}
       </option>
     </select>
-    <br>
-    <br>
+    <br />
+    <br />
     <h3>Seleção B</h3>
-    <select name="" id="">
+    <select name="selecaoB" id="selecaoB" [(ngModel)]="selecaoB">
       <option *ngFor="let selecao of selecoes" value="{{ selecao.id }}">
         {{ selecao.id }} - {{ selecao.nome }}
       </option>
     </select>
   </mat-card-content>
 
-  <button mat-raised-button color="warn" id="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
+  <button
+    mat-raised-button
+    color="warn"
+    id="btnCadastrar"
+    (click)="cadastrar()"
+  >
+    Cadastrar
+  </button>
 </mat-card>
