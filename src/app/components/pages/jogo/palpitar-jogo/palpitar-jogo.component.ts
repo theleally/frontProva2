@@ -46,5 +46,6 @@ export class PalpitarJogoComponent implements OnInit {
       selecaoA: this.selecaoA,
       selecaoB: this.selecaoB,
     };
+    this.router.navigate(["pages/jogo/listar"]);
   }
 }
